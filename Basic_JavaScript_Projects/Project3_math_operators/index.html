@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Math Practice </title>
+        <meta charset="utf-8">
+        <script type="text/javascript" src="JS/main.js"></script>
+    </head>
+    <body>
+        <p id="add" onclick="javascript:addition()">Addition will be done here if you click</p>
+
+        <p id="subtract" onclick="javascript:subtraction()">Subtraction will be done here if you click</p>
+
+        <p id="multdivide" onclick="javascript:multiplydivide()">Both multiplication and division will be done here if you click</p>
+
+        <p id="simplemath" onclick="javascript:simplemath()">Click here for more math</p>
+
+        <p id="remainder" onclick="javascript:remainder()">Click here to see the remainder of two numbers</p>
+
+        <p> Put a number here to make flip the operator <input type="number" placeholder="put number here" id="operator">
+            <button id="btn" onclick="javascript:operator()">CLICK</button>
+            <p> Answer is = <input type="number" id="answeroperator" value=""></p>
+
+            <p onclick="javascript:increment()">Increase this number by clicking on me! <input type="number" id="increase" value="5"></p>
+            <p onclick="javascript:decrement()">Decrease this number by clicking on me! <input type="number" id="decrease" value="5"></p>
+
+            <p onclick="javascript:randomnumber()" id="random">Click for a random number</p>
+
+            <input style="width:20em" type="number" placeholder="Input number here to round up" id="round"><button onclick="javascript:round()">ROUND</button>
+    </body>
+</html>
