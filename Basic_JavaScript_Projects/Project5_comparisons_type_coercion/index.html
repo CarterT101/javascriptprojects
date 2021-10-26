@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Coercions </title>
+        <meta charset="utf-8">
+        <script type="text/javascript" src="JS/main.js"></script>
+    </head>
+    <body>
+        <p onclick="javascript:type()" id="type">Click here</p>
+    <br>
+        <p onclick="javascript:coercion()" id="coercion">Click here!</p>
+
+        <p id="test" onclick="javascript:test()">Test</p>
+
+        <p id="test2" onclick="javascript:test2()">Test</p>
+
+        <p> Input two numbers below to see if first number is bigger than second number </p>
+            <input type="number" placeholder= "number 1" id="num1">
+            <input type="number" placeholder= "number 2" id="num2">
+        <button type="button" onclick="javascript:compare()">CLICK</button>
+            <p> Answer is = <input type="text" id="answer" value=""></p>
+
+            <p> Input two numbers below to see if they are equal </p>
+            <input type="number" placeholder= "number 1" id="num3">
+            <input type="number" placeholder= "number 2" id="num4">
+        <button type="button" onclick="javascript:equal()">CLICK</button>
+            <p> Answer is = <input type="text" id="answer2" value=""></p>
+
+            <p> Input two numbers below to see if first number is bigger than second number </p>
+            <input type="text" placeholder= "number 1" id="value1">
+            <input type="text" placeholder= "number 2" id="value2">
+        <button type="button" onclick="javascript:morecompare()">CLICK</button>
+            <p> Answer is = <input type="text" id="answer3" value=""></p>
+
+            <p>Click below to see if 10>2 AND 3>4 are correct</p>
+            <p onclick="javascript:and()" id="clickme1">Click me!</p>
+
+            <p>Click below to see if 10>2 OR 6>4 are correct</p>
+            <p onclick="javascript:or()" id="clickme2">Click me!</p>
+
+            <p>Click below to see the NOT operator in use on 5>4</p>
+            <p onclick="javascript:not()" id="clickme3">Click me!</p>
+
+
+    </body>
+</html>
