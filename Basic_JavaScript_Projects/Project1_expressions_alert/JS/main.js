@@ -14,5 +14,9 @@ document.write(first + second); //concatenating the strings
 var x = 10; //assigning a variable value
 var y = (x + 5); //writing an expression
 
+function displayDate() {
+    document.getElementById('test').innerHTML = Date();
+}
+
 
 
