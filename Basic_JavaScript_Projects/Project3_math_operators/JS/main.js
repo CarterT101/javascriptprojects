@@ -46,5 +46,5 @@ function randomnumber() {
 }
 
 function round() {
-    document.getElementById("round").value = Math.round(document.getElementById("round").value);
+    document.getElementById("round").value = Math.round(document.getElementById("round").value); //set id round equal to id round but using math.round method
 }
