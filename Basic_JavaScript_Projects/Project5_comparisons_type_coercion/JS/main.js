@@ -18,8 +18,8 @@ function test2() {
 }
 
 function compare() {
-    var num1 = parseInt(document.getElementById("num1").value); //bringing ID num1 into variable num1 as an Integer
-    var num2 = parseInt(document.getElementById("num2").value); //bringing ID num2 into variable num2 as an Integer
+    var num1 = eval(document.getElementById("num1").value); //bringing ID num1 into variable num1 as an Integer
+    var num2 = eval(document.getElementById("num2").value); //bringing ID num2 into variable num2 as an Integer
     var answer = num1>num2; //comparing num1 to num2 and making the answer the variable "answer"
     document.getElementById("answer").value = answer;    //making ID answer equal to variable answer
 }
