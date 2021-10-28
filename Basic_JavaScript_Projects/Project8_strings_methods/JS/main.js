@@ -34,5 +34,12 @@ function precision_method() {
 }
 
 function tofixed_method() {
-    
+    var val1 = document.getElementById("input1").value;
+    var val2 = parseFloat(val1).toFixed(2);
+    document.getElementById("answer").innerHTML = val2;
+}
+
+function valueofmethod() {
+    W=120;
+    document.getElementById("valueof").innerHTML = W.valueOf();
 }
