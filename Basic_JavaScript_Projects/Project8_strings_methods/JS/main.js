@@ -13,7 +13,26 @@ function slicemethod() {
 }
 
 function upper() {
-    var upp = document.getElementById("upp");
+    var upp = "Click to make this all uppercase"
     var upper = upp.toUpperCase();
     document.getElementById("upp").innerHTML = upper;
+}
+
+function dem() {
+    let str = "Visit W3Schools!"; 
+    document.getElementById("demo").innerHTML = str.search("W3");
+}
+
+function string_method() {
+    var Z=102;
+    document.getElementById("numberstostring").innerHTML = Z.toString();
+}
+    
+function precision_method() {
+    var B=12938.31012375698123;
+    document.getElementById("precision").innerHTML = B.toPrecision(10);
+}
+
+function tofixed_method() {
+    
 }
