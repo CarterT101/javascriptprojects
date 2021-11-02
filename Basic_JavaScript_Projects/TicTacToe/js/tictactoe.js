@@ -187,7 +187,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
             //if we've reached the end points
             if (x >= x2 && y >= y2) { cancelAnimationFrame(animationLoop); }
         }
-        //condition is similar to the one above
+        //this condition is similar to the one above
         //necessary for the 6, 4, 2 win condition if either X or O won on the diagonal line from right to left
         if (x1 <= x2 && y1 >= y2) {
             if (x < x2) { x += 10; }
