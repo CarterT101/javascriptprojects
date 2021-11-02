@@ -80,7 +80,7 @@ function checkWinConditions() { //checks for every possible winning scenario of 
     // X 0, 3, 6 condition
     else if     (arrayIncludes('0X', '3X', '6X')) { drawWinLine(100, 50, 100, 558) }
     // X 1, 4, 7 condition
-    else if     (arrayIncludes('1X', '4X', '7X')) { drawWinLine(304, 50, 304, 5587) }
+    else if     (arrayIncludes('1X', '4X', '7X')) { drawWinLine(304, 50, 304, 558) }
     // X 2, 5, 8 condition
     else if     (arrayIncludes('2X', '5X', '8X')) { drawWinLine(508, 50, 508, 558) }
     // X 6, 4, 2 condition
@@ -212,7 +212,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
     //calls main animation loop
     animateLineDrawing(); 
     //line waits 3 seconds. then, clears canvas, resets game, allows clicking again
-    setTimeout(function () { clear(); resetGame(); }, 3000);
+    setTimeout(function () { clear(); resetGame(); }, 1000);
 }
 
 //function resets game in the event of a tie or win
