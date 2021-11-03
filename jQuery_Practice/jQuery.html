@@ -28,20 +28,20 @@
                 );
                 $('#2').css({"color":"red"});
                 $('#3').click(function() {
-                    $('h1').hide();
+                    $('h1').hide(); //when clicked, hides h1 element
                 });
                 $('#1').click(function() {
                     $('#4').css({"color":"blue"});
-                });
+                }); //when clicked, id 4 turns to color blue
                 $('#2').hover(function() {
                     $('body').css({"background-color":"green"});
-                });
+                }); //when hovered over, background color of body element changes to green
                 $('#4').click(function() {
-                    $('#1').replaceWith('Hello there');
+                    $('#1').replaceWith('Hello there'); //when clicked on id 4, id 1 gets replaced with different text
                 });
-                $('#5').click(function() {
+                $('#5').click(function() { //when id 5 clicked, a new paragraph that was originally hidden now shows
                     $('#6').show();
-                });
+                }); 
 
             });
 
