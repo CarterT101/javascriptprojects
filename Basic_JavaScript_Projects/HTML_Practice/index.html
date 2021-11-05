@@ -12,6 +12,8 @@
 
         <h1>This is responsive text!</h1>
 
+        <h3 ondblclick="replaceme()" id="replaceme">Double Click me!</h3>
+
         <hr>
         <br>
 
@@ -61,6 +63,13 @@
                 <img style="width: 100%;" src="img/slide3.png">
             </div>
 
+        <!--Method practice-->
+
+            <p id="Cars"></p>
+            <p onclick="parseme()" id="Cars2">Click to parse</p>
+            <br>
+            <p id="myCar"></p>
+
         <!--Form Popup-->
 
         <button class="open-button" onclick="openForm()">Open Form</button>
@@ -83,6 +92,34 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
         crossorigin="anonymous"></script>
+
+        <script>
+
+            //method practice
+
+            var car = {brand: "Tesla", model: "Model S", color: "Blue"}; //creates variable 
+
+            function parseme() {
+                var car2 = '{"brand": "Tesla", "model": "Model S", "color": "blue"}';
+                var JSONstring2 = JSON.parse(car2);
+                document.getElementById("Cars2").innerHTML = JSONstring2.brand + " makes the " + JSONstring2.color + " " + JSONstring2.model + " electric car."
+            }
+
+            var JSONstring = JSON.stringify(car); //converts to string
+            document.getElementById("Cars").innerHTML = JSONstring; //prints
+
+            localStorage.setItem("brand", "Tesla"); //set data as key/value pair to be saved locally in browser
+
+            document.getElementById("myCar").innerHTML = localStorage.getItem("brand"); //return value
+
+            //double click
+
+            function replaceme() {
+                document.getElementById("replaceme").innerHTML = "<span class='replaced'>You just replaced some text!</span>";
+            }
+
+
+        </script>
 
         <script>
 

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/portfolio-website.css">
+        <title> Carter's Portfolio </title>
+    </head>
+    <body id="home" class="background">
+
+        <!--Navigation bar-->
+
+        <div class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#github">GitHub</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <br> 
+        <br>
+
+        <!--Video Background and text-->
+
+        <div>
+            <video autoplay muted loop class="backgroundvideo">
+                <source src="img/video/pexels-mart-production-8165891.mp4" type="video/mp4">
+                <source src="img/video/pexels-mart-production-8165891.webm" type="video/webm">
+                Your browser does not support HTML5 video.
+            </video>
+
+        </div>
+        
+        <div class="videotext">
+            <h1> Carter's Portfolio </h1>
+            <p> Welcome to my portfolio! </p>
+            <p> <span> “Simplicity is the soul of efficiency.” </span> – Austin Freeman </p>
+            <p> My name is Carter Thurman. Thank you for visiting my website!</p>
+            <p> Learn more about me below! </p>
+        </div>
+
+        <div class="slideshow">
+
+
+
+        </div>
+
+        <!--About-->
+
+        <div id=about>
+            <div class="row">
+                    <div class="column1">
+                        <h2 class="bounce"> About </h2>
+                        <p> I am a software developer in training. I enjoy building computers, exercising, and traveling! </p>
+                        <p> I am currently going through the Software Developer course at The Tech Academy learning how to be a full stack developer!</p>
+                        <p> I like working on projects with other people! <a href="#contact">Contact me below!</a></p>
+                    </div>
+                    <div>
+                        <div class="column2">
+                            <img class="imgfilter" src="img/pexels-cameron-mcmurtrey-9665802.jpg" alt="Picture of San Francisco">
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        <!--GitHub-->
+
+        <div class="row">
+            <div class="column2">
+                <video loop muted autoplay class="columnvideo imgfilter">
+                    <source src="img/video/pexels-edmond-dantès-8033128.mp4" type="video/mp4">
+                    <source src="" type="video/webm">
+                    Your browser does not support HTML5 video.
+                </video>
+            </div>
+
+            <div class="column1" id="github">
+                <h2 class="bounce"> GITHUB </h2>
+                <br>
+                    <p> Take a look at my previous coding projects on my GitHub portfolio:</p>
+                <br>
+                    <a href="https://github.com/CarterT101" target="_blank">CarterT101's Profile </a>
+            </div>
+        </div>
+
+        <!--Contact-->
+
+        <div class="row">
+            <div class="column1">
+                <h2 id="contact" class="bounce"> Contact </h2>
+                <div class="innerrow">
+                    <form action="" method="POST">
+                        <div class="innercolumn">
+                            <div class="formfloat">
+                                    <label>Name:</label><br>
+                                        <input type="text" placeholder="Please enter your name here"><br>
+                                    <label>Email:</label><br>
+                                        <input type="text" placeholder="Please enter your email here"><br>
+                                    <label>Message:</label><br>
+                                        <input type="text" placeholder="Please enter your message here"><br>
+                            </div>
+                        </div>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                                <div class="innercolumn">
+                                    <input class="submit" type="submit" value="submit"><br>
+                                </div>
+                    </form>
+                </div>
+                        
+            </div>
+            <div>
+                <div class="column2">
+                    <div class="innerrow2">
+                        <div class="innercolumn2">
+                            <h2 class="bounce"> languages </h2>
+                            <br>
+                            <p class="fix"> I am trained in HTML, CSS, and JavaScript! Soon I will be trained in SQL, Python, C#, and .NET.</p>
+
+
+
+                        </div>
+                        
+                        <div class="innercolumn3">
+
+                            <div id="slideshow">
+                                <div id="slideshowbackground">
+                                    <div id="slideshowcontainer">
+
+                                        <!--Slide 1-->
+                                        <div class="myslides fade">
+                                            <img class="slideshowimages" src="img/htmlcssjs.png" alt="HTML, CSS, JS">
+                                            <a class="previous" onclick="plusSlides(-1)">&#10094;</a>
+                                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                                        </div>
+
+                                        <!--Slide 2-->
+                                        <div class="myslides fade">
+                                            <img class="slideshowimages" src="img/python.png" alt="Python">
+                                            <a class="previous" onclick="plusSlides(-1)">&#10094;</a>
+                                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                                        </div>
+
+                                        <!--Slide 3-->
+                                        <div class="myslides fade">
+                                            <img class="slideshowimages" src="img/c.png" alt="C#">
+                                            <a class="previous" onclick="plusSlides(-1)">&#10094;</a>
+                                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Social Media-->
+
+        <div id="quicklinks">
+            <button onclick="openLinks()" class="popupbtn">social <br>media</button>
+                <div class="media-popup" id="mymedia">
+                    <div class="media-container linkrow">
+                        <div class="link">
+                            <a href="https://www.linkedin.com/in/carter-thurman-09576b222/" target="_blank"><img src="img/linkedin.png" style="width: 100%;"></a>
+                        </div>
+                        <div class="link">
+                            <a href="https://www.instagram.com/carter_thurman/" target="_blank"><img src="img/instagram.png" style="width:100%;"></a>
+                        </div>
+                        <br>
+                    <button type="button" class="btn" onclick="closeLinks()">close</button>
+                </div>
+            </div>
+        </div>
+
+        <footer> This website was made by Carter T.  </footer> 
+
+        <script src="js/main.js"></script>
+    </body>
+</html>

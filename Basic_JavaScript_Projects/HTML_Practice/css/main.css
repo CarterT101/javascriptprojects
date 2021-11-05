@@ -12,6 +12,12 @@ hr {
     border: 2px solid red;
 }
 
+.replaced {
+    color:red;
+    background-color: yellow;
+}
+
+
 @keyframes fadevideotext {
     from {opacity: 0;}
     to {opacity: 1;}

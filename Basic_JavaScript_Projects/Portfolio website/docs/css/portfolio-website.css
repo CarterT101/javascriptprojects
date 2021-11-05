@@ -1,0 +1,475 @@
+/* Basic Formatting */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0%;
+}
+
+h1 {
+    text-transform: lowercase;
+    font-family:'Courier New', Courier, monospace;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 1em;
+}
+
+h1:hover {
+    transform: scale(.8);
+    transition:transform 2s;
+}
+
+h2 {
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-transform: lowercase;
+    font-style: italic;
+    color:black;
+}
+
+.imgfilter {
+    filter:blur(2px)  grayscale(100%);
+    transition: 1.2s;
+}
+
+.imgfilter:hover {
+    filter:blur(0px)  grayscale(100%);
+    
+}
+
+#github {
+    text-align: center;
+}
+
+/* Navbar */
+
+.navbar {
+    overflow: hidden;
+    background-color: rgb(128, 128, 128);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    -webkit-animation: movenav 2s;
+    animation: movenav 2s;
+    box-shadow: 1px 1px 30px .5px black;
+    padding-left: 1em;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    padding: .5em;
+    text-decoration: none;
+    color: white;
+}
+
+@keyframes movenav {
+    from {top: -50vh;}
+    to {top: 0vh;}
+}
+
+.navbar a:hover {
+    background-color: rgba(218,112,214,.5);
+    color: rgba(0,0,0,.5);
+    font-weight:bold;
+}
+
+/* Background video and text */
+
+.backgroundvideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    z-index: -1;
+}
+
+.videotext {
+    width:100%;
+    position: relative;
+    color: white;
+    -webkit-animation: fadevideotext 6s;
+    animation: fadevideotext 6s;    
+}
+
+.videotext h1 {
+    transition: transform 2s;
+}
+
+.videotext span {
+    font-weight: bold;
+}
+
+.videotext p {
+    text-align: center;
+    margin-top: 1em;
+    font-size: 1.25em;
+    text-shadow: 1px 1px black;
+    transition: transform 2s;
+}
+
+.videotext p:hover {
+    transform: scale(.8);
+}
+
+.videotext h1:hover {
+    transform: scale(.8);
+}
+
+@keyframes fadevideotext {
+    from {opacity: 0;}
+    to {opacity: 1;}
+    0% {
+        transform: scale(.4);
+        -webkit-transform:scale(.4);
+    }
+    100% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+    }
+}
+
+/* Columns */
+
+* {
+    box-sizing: border-box;
+}
+
+.row:after {
+    content:"";
+    display: table;
+    clear: both;
+}
+
+.row p {
+    font-family:Perpetua, Rockwell Extra Bold;
+    font-size: 1.2em;
+}
+   
+.column1 {
+    float: left;
+    width: 50%;
+    padding-left: 1em;
+    padding-top: 1em;
+    background-color: rgb(240,255,255);
+    height: 20em;
+    border:1px solid black;
+}
+
+.column2 {
+    float: left;
+    width: 50%;
+    padding: 1em;
+    background-color: rgb(199, 199, 199);
+    height: 20em;
+    padding-bottom: 1em;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.column2 img {
+    width:auto;
+    max-height: 18em;
+    box-shadow: 1px 1px 15px 1px black;
+}
+
+/* GITHUB */
+
+.columnvideo {
+    width: auto;
+    max-height: 18em;
+    box-shadow:1px 1px 15px 1px black;
+    transition: all ease-in-out .5s;
+}
+
+@media screen and (max-width:1100px) {
+    .columnvideo {
+        height: 15em;
+        width: auto;
+    }
+    .imgfilter {
+        height: 15em;
+        width: auto;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .columnvideo {
+        height: 10em;
+        width: auto;
+    }
+    .imgfilter {
+        height: 10em;
+        width: auto;
+    }
+}
+
+@media screen and (max-width:630px) {
+    .columnvideo {
+        display: none;
+    }
+    .imgfilter {
+        display: none;
+    }
+}
+
+.bounce {
+    transition: ease-in-out;
+}
+
+.bounce:hover {
+    transform: translateY(5px);
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: bouncy;
+    animation-timing-function: cubic-bezier(2.5,.2,.3,2);
+    color: rgb(218,112,214);
+}
+
+@keyframes bouncy {
+    0%, 100% {
+        transform:translateY(-10px);
+    }
+    50% {
+        transform: translateY(25px);
+    }
+}
+
+/* Contact form */
+
+.formfloat {
+    font-size: 1.5em;
+    font-family: monospace;
+}
+
+.submit {
+    width: 50%;
+    height: 100%;
+    font-size: 1em;
+    transition: ease-in-out;
+}
+
+.submit:hover {
+    background-color: rgba(0,0,0,.2);
+    color: rgb(218,112,214);
+}
+
+input {
+    width: 20em;
+    height: 3em;
+    border-radius: 5px;
+    background-color: rgba(128, 128, 128, 0.308);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin-top:.5em;
+    margin-bottom: .5em;
+}
+
+.innerrow:after {
+    content:"";
+    display: table;
+    clear:both;
+}
+
+.innercolumn {
+    float: left;
+    width: 50%;
+}
+
+footer {
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:black;
+    padding:2%;
+    background-color: rgba(128, 128, 128, 0.541);
+}
+
+/*opens media links fixed at bottom of page*/
+
+.popupbtn {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+    text-align: center;
+    position: fixed;
+    bottom: 1.5vw;
+    right: 1.5vw;
+    width: 5vw;
+    height: 5vw;
+    background-color: rgb(240,255,255);
+    color: black;
+    cursor: pointer;
+    -webkit-animation: movePopup 5s;
+    animation:movePopup 5s;
+    border-radius: 100px;
+}
+
+@keyframes movePopup {
+    from {right:-40vw;}
+    to {right:1.5vw;}
+}
+
+@-webkit-keyframes movePopup {
+    from {right:-40vw;}
+    to {right:1.5vw;}
+}
+
+.media-popup {
+    border: 3px solid black;
+    border-radius: 50px;
+    z-index: 8;
+    display: none;
+    position: fixed;
+    bottom: .5vw;
+    right: .5vw;
+    background-color: rgb(218,112,214);
+    height: 10vw;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 3s;
+}
+
+.media-popup:hover {
+    background-color: gray;
+}
+
+.media-container {
+    width: 12vw;
+    padding: .5vw;
+}
+
+.media-container a {
+    margin: .5vw 0 .5vw 0;
+    border: none;
+}
+
+button {
+    font-family: 'Courier New', Courier, monospace;
+    padding: .5vw;
+    width: 5vw;
+    cursor: pointer;
+    height: auto;
+    border-radius: 20px;
+    float: right;
+}
+
+button:hover, .media-container .btn:hover{
+    color: rgb(218,112,214);
+    transition-duration: .5s;
+    -webkit-transition-duration: .5s;
+}
+
+.media-container .btn {
+    background-color: white;
+    color: black;
+    border-color: black;
+}
+
+.link {
+    float:left;
+    width: 50%;
+    transition: 1.2s;
+}
+
+.link:hover {
+    filter: grayscale(75%);
+}
+
+.linkrow:after {
+    content:"";
+    display: table;
+    clear: both;
+}
+
+/*Slideshow*/
+
+.fix {
+    font; 
+}
+
+.innerrow2:after {
+    content:"";
+    display: table;
+    clear:both;
+}
+
+.innercolumn2 {
+    float: left;
+    width: 30%;
+}
+
+.innercolumn3 {
+    float: left;
+    width: 70%;
+}
+
+#slideshow {
+    width: 10vw;
+}
+
+.myslides{
+    display: none; 
+}
+
+#slideshowbackground {
+    width: 39.5vw; 
+    height: auto; 
+    padding-top: 4%; 
+    position: relative; 
+    margin:auto; 
+}
+
+.slideshowimages {
+    vertical-align: middle; 
+    height: auto; 
+    box-shadow: 0px 5px 10px 12px rgba(0, 0, 0, .75); 
+    width: 100%; 
+}
+
+/* Next and previous buttons */
+.previous, .next {
+    cursor: pointer;
+    width: auto; 
+    padding: 1vw; 
+    color: darkgray; 
+    font-weight: bold;
+    font-size: 1.5vw;
+    border-radius: 0 3px 3px 0; 
+    user-select: none;
+    transition: 0.6s ease; 
+}
+
+/* Positioning the next button on the right hand side */
+.next {
+    right: 0; 
+    border-radius: 3px 0 0 3px; 
+}
+
+/* Hover effect on slide show buttons */
+.previous:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8); 
+    color: white; 
+}
+
+/* Fading animation for slideshow */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s; 
+    -webkit-animation-name: fade; 
+    -webkit-animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4;} 
+    to {opacity: 1;} 
+}
+
+@keyframes fade {
+    from {opacity: .4;} 
+    to {opacity: 1;} 
+}
+
+
