@@ -1,0 +1,170 @@
+html {
+    scroll-behavior: smooth;
+}
+
+h1 {
+    font-size:10vw;
+    -webkit-animation: fadevideotext 6s;
+    animation: fadevideotext 6s;
+}
+
+hr {
+    border: 2px solid red;
+}
+
+@keyframes fadevideotext {
+    from {opacity: 0;}
+    to {opacity: 1;}
+    0% {
+        transform: scale(.4);
+        -webkit-transform: scale(.4);
+    }
+    100% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+    }
+}
+
+/*Animated photo*/
+
+.imgcontainer {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+.zoom {
+    padding:50px;
+    transition: transform .5s;
+    margin: 0 auto;
+    animation: zoominoutsinglefeatured 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes zoominoutsinglefeatured {
+    0% {
+        transform: scale(1,1);
+    }
+    50% {
+        transform: scale(1.1,1.1);
+    }
+    100% {
+        transform:scale(1,1);
+    }
+    .single-featured-image-header img {
+        animation: zoominoutsinglefeatured 5s forward;
+    }
+}
+
+/*Slideshow*/
+
+.fadein {
+    margin: 50px auto;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+}
+
+.fadein > img {
+    position: absolute;
+    top:10px;
+    left:10px;
+    right:10px;
+    bottom: 10px;
+}
+
+/*Sticky!*/
+
+.sticky {
+    background-color: blue;
+    color:white;
+    text-align: center;
+    font-size: 2em;
+    position: -webkit-sticky;
+    position: sticky;
+    top:0;
+    z-index: 10;
+}
+
+/* Form pop up */
+
+* {box-sizing: border-box;}
+
+/*button used to open contact form, fixed at bottom of page*/
+
+.open-button {
+    background-color: rgb(0, 81, 255);
+    color: white;
+    padding: 16px 20px;
+    border:none;
+    cursor: pointer;
+    opacity: .8;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    width: 280px;
+}
+
+/*popup form hidden by default*/
+
+.form-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border:3px solid #f1f1f1;
+    z-index: 9;
+}
+
+/*Add styles to form container*/
+
+.form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+}
+
+/*Full-width input fields*/
+
+.form-container input[type=text], .form-container input[type=submit] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border:none;
+    background:#f1f1f1;
+}
+
+/*Input gets focus, do something*/
+
+.form-container input[type=text]:focus, .form-container input[type=submit]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/*Sets style for submit button*/
+
+.form-container .btn {
+    background-color: #04aa36;
+    color: white;
+    padding: 16px 20px;
+    border:none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+/*Adds background color to cancel button*/
+
+.form-container .cancel {
+    background-color: rgb(126, 0, 0);
+}
+
+/*Hover effects to buttons*/
+
+.form-container btn:hover, .open-button:hover {
+    opacity: 1;
+}
+
